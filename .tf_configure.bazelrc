@@ -1,0 +1,16 @@
+build --action_env PYTHON_BIN_PATH="/Users/harrypotter/anaconda2/bin/python"
+build --action_env PYTHON_LIB_PATH="/Users/harrypotter/anaconda2/lib/python2.7/site-packages"
+build --define PYTHON_BIN_PATH="/Users/harrypotter/anaconda2/bin/python"
+build --define PYTHON_LIB_PATH="/Users/harrypotter/anaconda2/lib/python2.7/site-packages"
+build --force_python=py2
+build --host_force_python=py2
+build --python2_path="/Users/harrypotter/anaconda2/bin/python"
+test --force_python=py2
+test --host_force_python=py2
+test --define PYTHON_BIN_PATH="/Users/harrypotter/anaconda2/bin/python"
+test --define PYTHON_LIB_PATH="/Users/harrypotter/anaconda2/lib/python2.7/site-packages"
+run --define PYTHON_BIN_PATH="/Users/harrypotter/anaconda2/bin/python"
+run --define PYTHON_LIB_PATH="/Users/harrypotter/anaconda2/lib/python2.7/site-packages"
+build:opt --cxxopt=-march=native --copt=-march=native
+build --action_env TF_NEED_CUDA="0"
+build --action_env TF_NEED_OPENCL="0"
